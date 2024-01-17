@@ -6,6 +6,9 @@
   * For more info and help: https://bootstrapmade.com/php-email-form/
   */
 
+  ini_set('display_errors', 'On');
+	error_reporting(E_ALL);
+
   $name = $_POST["name"];
   $email = $_POST["email"];
   $subject = $_POST["subject"];

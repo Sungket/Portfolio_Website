@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "devicon": "^2.15.1"
+    "devicon": "^2.15.1",
+    "jquery": "^3.7.1"
   }
 }

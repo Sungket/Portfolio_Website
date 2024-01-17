@@ -246,11 +246,26 @@
   /**
    * Process contact form using AJAX call to php file
    */
-  $.ajax({
-    url: "../forms/contact.php?",
-    type: "GET",
-    success: function(result){
-      console.log('email sent');
-    }
+  $("#contactForm").on("submit", function(event) {
+
+    event.preventDefault();
+
+    let $form = $(this),
+      url = $form.attr('action');
+
+    let posting = $.post(url, {
+      enquiryName: $('#name').val(),
+      email: $('#email').val(),
+      subject: $('#subject').val(),
+      message: $('#message').val()
+    });
+
+  /* Alerts the results */
+  posting.done(function(data) {
+    $('#result').text('success');
+  });
+  posting.fail(function() {
+    $('#result').text('failed');
+  });
   })
 })()
