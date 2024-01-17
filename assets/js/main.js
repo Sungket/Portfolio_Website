@@ -141,7 +141,7 @@
   }, true)
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scroll with offset on links with a class name .scrollto
    */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
@@ -242,4 +242,15 @@
    */
   new PureCounter();
 
+
+  /**
+   * Process contact form using AJAX call to php file
+   */
+  $.ajax({
+    url: "../forms/contact.php?",
+    type: "GET",
+    success: function(result){
+      console.log('email sent');
+    }
+  })
 })()
