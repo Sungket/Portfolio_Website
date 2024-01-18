@@ -262,10 +262,14 @@
 
   /* Alerts the results */
   posting.done(function(data) {
-    $('#result').text('success');
+    $('#result').text('Your message has been sent. Thank you!');
+    $('#name').val('');
+    $('#email').val('');
+    $('#subject').val('');
+    $('#message').val('');
   });
   posting.fail(function() {
-    $('#result').text('failed');
+    $('#result').text('message send failed, please email directly to contact@sungketpatel.co.uk');
   });
   })
 })()
