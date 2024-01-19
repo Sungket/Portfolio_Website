@@ -999,6 +999,13 @@ svg {
   font-size: 1.2rem;
 }
 
+#tech {
+  background-color: black;
+  border-radius: 10%;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
