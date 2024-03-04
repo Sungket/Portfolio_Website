@@ -915,6 +915,23 @@ svg {
   color: #4e4e4e;
 }
 
+.s-date {
+  font-size: 1.1rem;
+  font-style: italic;
+  text-align: center;
+  padding: 0.4rem 0;
+}
+
+#kuka-logo {
+  height: 80px;
+  width: 80px;
+}
+
+#uniHerts {
+  height: 80px;
+  width: 80px;
+}
+
 /*--------------------------------------------------------------
 # Counter
 --------------------------------------------------------------*/
