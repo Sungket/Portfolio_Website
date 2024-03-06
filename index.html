@@ -748,6 +748,7 @@
                     </div>
                     <div>
                       <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form"> -->
+                        <!-- Previously, method:post was not there when using the last php -->
                       <form id="contactForm" action="forms/contact.php">
                         <div class="row">
                           <div class="col-md-12 mb-3">
@@ -777,7 +778,7 @@
                             <div class="result" id="result"></div>
                           </div>
                           <div class="col-md-12 text-center">
-                            <button type="submit" class="button button-a button-big button-rounded">Send Message</button>
+                            <button type="submit" id="contactSubmit" class="button button-a button-big button-rounded">Send Message</button>
                           </div>
                         </div>
                       </form>

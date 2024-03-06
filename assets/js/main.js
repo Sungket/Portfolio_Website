@@ -248,6 +248,9 @@
    */
   $("#contactForm").on("submit", function(event) {
 
+    //change colour and text of button when processing
+    $("#contactSubmit").text('sending...');
+
     event.preventDefault();
 
     let $form = $(this),
@@ -262,6 +265,9 @@
 
   /* Alerts the results */
   posting.done(function(data) {
+    //change the colour of submit button back to original
+    $("#contactSubmit").text('Send Message');
+
     $('#result').text('Your message has been sent. Thank you!');
     $('#name').val('');
     $('#email').val('');
@@ -269,7 +275,7 @@
     $('#message').val('');
   });
   posting.fail(function() {
-    $('#result').text('message send failed, please email directly to contact@sungketpatel.co.uk');
+    $('#result').text('message send failed.');
   });
   })
 })()

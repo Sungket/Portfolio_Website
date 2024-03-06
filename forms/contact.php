@@ -9,7 +9,7 @@
   ini_set('display_errors', 'On');
 	error_reporting(E_ALL);
 
-  $name = $_POST["name"];
+  $name = $_POST["enquiryName"];
   $email = $_POST["email"];
   $subject = $_POST["subject"];
   $message = $_POST["message"];
@@ -58,12 +58,16 @@
 
     //Recipients
     $mail->setFrom($email, $name);
-    // $mail->addAddress("sunj.rhymes@googlemail.com");
-    $mail->addAddress("contact@sungketpatel.co.uk");
+    // $mail->addAddress("contact@sungketpatel.co.uk");
+    $mail->addAddress("sunj.rhymes@googlemail.com");
+    $mail->addReplyTo($email);
 
     //Content
     $mail->Subject = $subject;
     $mail->Body = $message;
+
+    //Just need plain text message
+    $mail->isHTML(false);
 
     $mail->send();
 
